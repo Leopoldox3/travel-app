@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:platzi_trips_app/cardImageList.dart';
+import 'package:platzi_trips_app/Place/ui/widgets/cardImageList.dart';
 import 'package:platzi_trips_app/gradientBack.dart';
 
 class HeaderAppbar extends StatelessWidget {

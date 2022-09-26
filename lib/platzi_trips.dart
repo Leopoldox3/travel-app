@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:platzi_trips_app/headerAppbar.dart';
-import 'package:platzi_trips_app/headerProfile.dart';
-import 'package:platzi_trips_app/home_trips.dart';
-import 'package:platzi_trips_app/search_trips.dart';
+import 'package:platzi_trips_app/Place/ui/screens/headerAppbar.dart';
+import 'package:platzi_trips_app/User/ui/screens/headerProfile.dart';
+import 'package:platzi_trips_app/Place/ui/screens/home_trips.dart';
+import 'package:platzi_trips_app/Place/ui/screens/search_trips.dart';
 
 class PlatziTips extends StatefulWidget {
   const PlatziTips({Key? key}) : super(key: key);

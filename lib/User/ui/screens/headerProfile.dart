@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:platzi_trips_app/cardImageVeticalList.dart';
-import 'package:platzi_trips_app/circleButtonList.dart';
-import 'package:platzi_trips_app/gradienBackProfile.dart';
-import 'package:platzi_trips_app/profile_info.dart';
+import 'package:platzi_trips_app/User/ui/widgets/cardImageVeticalList.dart';
+import 'package:platzi_trips_app/User/ui/widgets/circleButtonList.dart';
+import 'package:platzi_trips_app/User/ui/widgets/gradienBackProfile.dart';
+import 'package:platzi_trips_app/User/ui/screens/profile_info.dart';
 
 class HeaderProfile extends StatelessWidget {
   const HeaderProfile({Key? key}) : super(key: key);
@@ -15,11 +15,13 @@ class HeaderProfile extends StatelessWidget {
         GradienBackProfile("Profile"),
         SafeArea(
           child: Padding(
-            padding: const EdgeInsets.only(top:60),
+            padding: const EdgeInsets.only(top:5),
             child: Column(
             children: [
               ProfileInfo("assets/img/leo.png","Leonardo","leopoldox3.lpa@gmail.com"),
+              
               const CircleButtonList(),
+              const SizedBox(height: 10,),
               const CardImageVerticalList(),
               
             ],

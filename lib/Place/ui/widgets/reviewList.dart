@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:platzi_trips_app/review.dart';
+import 'package:platzi_trips_app/Place/ui/widgets/review.dart';
 
 class ReviewList extends StatelessWidget {
 

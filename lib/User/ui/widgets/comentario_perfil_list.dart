@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:platzi_trips_app/comentatio_perfil.dart';
+import 'package:platzi_trips_app/User/ui/widgets/comentatio_perfil.dart';
 
 class d extends StatelessWidget {
   const d({Key? key}) : super(key: key);

@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:platzi_trips_app/cardImage.dart';
+import 'package:platzi_trips_app/Place/ui/widgets/cardImage.dart';
 
 class CardImageList extends StatelessWidget {
   const CardImageList({Key? key}) : super(key: key);

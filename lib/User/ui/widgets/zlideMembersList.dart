@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:platzi_trips_app/zlideMembers.dart';
+import 'package:platzi_trips_app/User/ui/widgets/zlideMembers.dart';
 
 class ZlideMembersList extends StatelessWidget {
   const ZlideMembersList({Key? key}) : super(key: key);
