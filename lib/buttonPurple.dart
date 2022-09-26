@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:platzi_trips_app/zlideMembersList.dart';
+import 'package:platzi_trips_app/User/ui/widgets/zlideMembersList.dart';
 
 
 class ButtonPurple extends StatelessWidget {
