@@ -6,21 +6,19 @@ class CardImageList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
-      return Container(
-        height: 350.0,
-        child: ListView(
-          padding: const EdgeInsets.all(25.0),
-          scrollDirection: Axis.horizontal,
-          children: [
-            CardImage("assets/img/c1.png"),
-            CardImage("assets/img/c2.png"),
-            CardImage("assets/img/c3.png"),
-            CardImage("assets/img/c4.png"),
-            CardImage("assets/img/c5.png")
-          ],
-
-        ),
-      );
+    return Container(
+      height: 330.0,
+      child: ListView(
+        padding: const EdgeInsets.all(25.0),
+        scrollDirection: Axis.horizontal,
+        children: [
+          CardImage("assets/img/c1.png"),
+          CardImage("assets/img/c2.png"),
+          CardImage("assets/img/c3.png"),
+          CardImage("assets/img/c4.png"),
+          CardImage("assets/img/c5.png")
+        ],
+      ),
+    );
   }
 }

@@ -1,14 +1,19 @@
 import 'dart:ui';
+
+import 'package:firebase_core/firebase_core.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
-import 'package:platzi_trips_app/Place/ui/widgets/description_place.dart';
 import 'package:flutter/material.dart';
 import 'package:platzi_trips_app/User/bloc/bloc_user.dart';
-import 'package:platzi_trips_app/gradientBack.dart';
-import 'package:platzi_trips_app/Place/ui/screens/headerAppbar.dart';
+import 'package:platzi_trips_app/User/ui/screens/sign_in_screen.dart';
 import 'package:platzi_trips_app/platzi_trips.dart';
-import 'package:platzi_trips_app/Place/ui/widgets/reviewList.dart';
 
-void main() {
+import 'firebase_options.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -19,15 +24,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      bloc: UserBloc(),
-      child: MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-      primarySwatch: Colors.blue,
-      ),
-      home: const PlatziTips()
-    ));
+        bloc: UserBloc(),
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Flutter Demo',
+          theme: ThemeData(
+            primarySwatch: Colors.blue,
+          ),
+          // home: const PlatziTips()
+          home: const SignInScreen(),
+        ));
   }
 }
 
@@ -54,17 +60,14 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _incrementCounter() {
     setState(() {
-  
       _counter++;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-   
     return Scaffold(
       appBar: AppBar(
-      
         title: Text(widget.title),
       ),
       body: Center(
@@ -96,6 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ],
         ),
-      ),);
+      ),
+    );
   }
 }
