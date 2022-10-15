@@ -1,43 +1,46 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
-class FloatingActionBotonGreen extends StatefulWidget {
-  const FloatingActionBotonGreen({Key? key}) : super(key: key);
+class FloatingActionButtonGreen extends StatefulWidget {
+
+  final IconData iconData;
+  final VoidCallback onPressed;
+
+  FloatingActionButtonGreen({
+    Key? key,
+    required this.iconData,
+    required this.onPressed
+  });
 
   @override
-  State<FloatingActionBotonGreen> createState() =>
-      _FloatingActionBotonGreenState();
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return _FloatingActionButtonGreen();
+  }
+
 }
 
-class _FloatingActionBotonGreenState extends State<FloatingActionBotonGreen> {
-  bool isFav = false;
 
-  void onPressedFav() {
-    setState(() {
-      if (isFav) {
-        isFav = false;
-      } else {
-        isFav = true;
-      }
-    });
+class _FloatingActionButtonGreen extends State<FloatingActionButtonGreen> {
 
-    //ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Te gusta esta foto")));
-  }
+  /*void onPressedFav(){
+    Scaffold.of(context).showSnackBar(
+        SnackBar(
+          content: Text("Agregaste a tus Favoritos"),
+        )
+    );
+  }*/
 
   @override
   Widget build(BuildContext context) {
-    return CircleAvatar(
+    // TODO: implement build
+    return FloatingActionButton(
       backgroundColor: Color(0xFF11DA53),
-      child: IconButton(
-        onPressed: onPressedFav,
-        color: Colors.white,
-        icon: Icon(
-          isFav ? Icons.favorite : Icons.favorite_border,
-        ),
-      ),
+      mini: true,
+      tooltip: "Fav",
+      onPressed: widget.onPressed,
+      child: Icon(widget.iconData),
+      heroTag: null,
     );
-
-    
   }
+
 }

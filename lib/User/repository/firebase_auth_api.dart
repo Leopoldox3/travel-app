@@ -5,6 +5,7 @@ class FirebaseAuthAPI {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final GoogleSignIn googleSingInt = GoogleSignIn();
 
+// API CONTIENE TODA LA LOGICA DE NEGOCIO DE LA CONEXION CON FIREBASE
   Future<UserCredential> signInWithGoogle() async {
     // Trigger the authentication flow(account)
     final GoogleSignInAccount? googleUser = await googleSingInt.signIn();
