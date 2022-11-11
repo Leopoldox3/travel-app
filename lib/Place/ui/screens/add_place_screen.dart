@@ -71,7 +71,7 @@ class _AddPlacesScreenState extends State<AddPlacesScreen> {
               children: [
                 Container(
                   alignment: Alignment.center,
-                  child: CardImageWithFabIcon(pathImage: "assets/img/c1.png", iconData: Icons.camera_alt, width: 350.0, height: 250.0, onPressedFabIcon: () {  },),
+                  child: CardImageWithFabIcon(pathImage: widget.image!.path, iconData: Icons.camera_alt, width: 350.0, height: 250.0, onPressedFabIcon: () {  },),
                 ),
                 Container(
                   margin: const EdgeInsets.only(top:20.0,bottom: 20.0),
@@ -99,8 +99,15 @@ class _AddPlacesScreenState extends State<AddPlacesScreen> {
                   width: 70.0,
                   child: ButtonPurple(buttonText: "Add Place",
                   onPressed: () {
-                    //1-Firebase Storage
-                    //url img
+                   
+                    // ID actual del usuario
+                    userBloc.currentUser.then((user) {
+                      if(user != null){
+                        //1-Firebase Storage
+                        //url img
+                      }
+                    });
+                    
 
                     //2-Cloud  Firestore
                     //Place - tittle, description, url, userOwner, likes
