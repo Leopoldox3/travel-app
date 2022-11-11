@@ -1,12 +1,14 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:platzi_trips_app/Place/ui/screens/add_place_screen.dart';
 import 'package:platzi_trips_app/User/bloc/bloc_user.dart';
 import 'circleButton.dart';
 
 class CircleButtonList extends StatelessWidget {
   late UserBloc userBloc;
+  final picker = ImagePicker();
   @override
   Widget build(BuildContext context) {
     userBloc = BlocProvider.of(context);
@@ -20,12 +22,19 @@ class CircleButtonList extends StatelessWidget {
                 false, Icons.add, 40.0, const Color.fromRGBO(255, 255, 255, 1),
                 () {
               //porque afecta el file? de add_place_screen aqui
-              File? image;
-              Navigator.push(
+             picker.pickImage(
+              source: ImageSource.camera)
+              .then((image) => {
+                Navigator.push(
                   context,
                   MaterialPageRoute(
                       builder: (BuildContext context) =>
-                          AddPlacesScreen(image: image)));
+                          AddPlacesScreen(image:File(image!.path))))
+               .catchError((onError)=> print(onError))
+              });
+              
+
+              
             }),
             CircleButton(
                 true,

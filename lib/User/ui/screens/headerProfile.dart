@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:generic_bloc_provider/generic_bloc_provider.dart';
 import 'package:platzi_trips_app/User/bloc/bloc_user.dart';
 import 'package:platzi_trips_app/User/ui/widgets/profle_places_list.dart';
-import 'package:platzi_trips_app/User/ui/widgets/circleButtonList.dart';
+import 'package:platzi_trips_app/User/ui/widgets/button_bar.dart';
 import 'package:platzi_trips_app/User/ui/widgets/profile_background.dart';
 import 'package:platzi_trips_app/User/ui/screens/profile_info.dart';
 import '../../model/user.dart';

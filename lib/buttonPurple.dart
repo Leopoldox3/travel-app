@@ -3,17 +3,16 @@ import 'package:platzi_trips_app/User/ui/widgets/zlideMembersList.dart';
 
 
 class ButtonPurple extends StatelessWidget {
-  String buttonText = "Navigate";
- ButtonPurple(this.buttonText,{Key? key}) : super(key: key);
+
+  final String buttonText;
+  final VoidCallback onPressed;
+ const ButtonPurple({Key? key,required this.buttonText, required this.onPressed,}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     
     return InkWell(
-      onTap: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context)=> const ZlideMembersList()));
-       // ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Navegando")));
-      },
+      onTap: onPressed,
       child: Container(
       margin: const EdgeInsets.only(
       top: 30.0,
