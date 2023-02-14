@@ -1,4 +1,4 @@
-# platzi_trips_app
+# travel_app
 
 A new Flutter project.
 
