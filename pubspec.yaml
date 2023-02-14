@@ -38,6 +38,7 @@ dependencies:
   firebase_storage: ^10.3.9
   cloud_firestore: ^3.4.9
   image_picker: ^0.8.6
+  fvm: ^2.4.1
   
 
 dev_dependencies:
